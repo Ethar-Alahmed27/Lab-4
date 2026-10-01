@@ -1,0 +1,41 @@
+Task 1 — Unification
+
+1. Query: ?- house = house.
+Result: true.
+Explanation: Both terms are identical.
+
+2. Query: ?- house = abc.
+Result: false.
+Explanation: The atoms are different and cannot be unified.
+
+3. Query: ?- edge(a,b) = edge(C,b).
+Result: C = a.
+Explanation: C is unified with a, and the second arguments already match.
+
+4. Query: ?- edge(a,d) = edge(C,B).
+Result: C = a, B = d.
+Explanation: Both variables are unified with their corresponding atoms.
+
+5. Query: ?- edge(C,B) = edge(a,d).
+Result: C = a, B = d.
+Explanation: The variables are unified with the corresponding atoms.
+
+6. Query: ?- edge(A,f(g,h)) = edge(a,B).
+Result: A = a, B = f(g,h).
+Explanation: A is unified with a, and B with the compound term f(g,h).
+
+7. Query: ?- edge(A,A) = edge(b,c).
+Result: false.
+Explanation: A must be both b and c, which is impossible because b and c are different.
+
+8. Query: ?- edge(A,A) = edge(b,b).
+Result: A = b.
+Explanation: Both occurrences of A can be unified with b.
+
+9. Query: ?- A = B, B = f.
+Result: A = f, B = f.
+Explanation: A and B are unified, then both become f.
+
+10. Query: ?- A = B, B = f, A = e.
+Result: false.
+Explanation: A and B become f, so A cannot also be unified with e.

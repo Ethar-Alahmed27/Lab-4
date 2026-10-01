@@ -1,0 +1,23 @@
+Task 2 
+
+1. Query: ?- female(X).
+Result:
+X = sara ;
+X = nora.
+
+2. Query: ?- male(_).
+Result: true.
+
+3. Query: ?- parent(G, P), parent(P, faisal).
+Result: G = ali, P = muhammad.
+
+4. Query: ?- parent(ahmad, X), female(X).
+Result:
+X = sara ;
+X = nora.
+
+5. Query: ?- parent(X, ahmad), parent(X, muhammad).
+Result: X = ali.
+
+6. Query: ?- brother(khan, nora).
+Result: true.
